@@ -8,8 +8,8 @@ char* get_tokens(){
     while(isspace(caracter)){// por si primero se leen espacios,
          caracter = getchar();
      }
-   char* cadena = (char*)calloc(128, 8);//cadena de tamaño 128 y cada byte tiene un valor de 8
-   //memset(cadena, 0, 128);
+   char* cadena = (char*)calloc(50, 8);//cadena de tamaño 128 y cada byte tiene un valor de 8
+   //memset(cadena, 0, 50);
     //free(cadena);
     int i=0;
     cadena[i]=caracter;
@@ -30,7 +30,7 @@ char* get_tokens(){
              caracter = getchar();
             }
      }
-    ungetc(caracter, stdin);//el caracter no era parte de la cadena y lo mandaba al stdin
+    ungetc(caracter, stdin);//el caracter no era parte de la cadena y lo manda al stdin
     return cadena;
  }
  int tipo_tokens(char caracter){

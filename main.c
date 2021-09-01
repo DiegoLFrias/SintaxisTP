@@ -7,9 +7,8 @@
  int main ()
  {
   int tipo=-1;
-  char* cadena = (char*)calloc(128, 8);
+  char* cadena = (char*)calloc(50, 8);
   while (tipo!=0){
-    //memset(cadena, 0, 128);
     cadena = get_tokens();
     tipo = tipo_tokens(cadena[0]);
  
