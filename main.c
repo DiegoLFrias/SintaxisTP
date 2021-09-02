@@ -10,16 +10,12 @@
   char* cadena = (char*)calloc(50, 8);
   while (tipo!=0){
     cadena = get_tokens();
-    tipo = tipo_tokens(cadena[0]);
- 
-    if(tipo==0){
-      printf("Fin de Texto: %s \n", cadena);
-    } else if(tipo==1){
-      printf("Separador: %s \n", cadena);
-    } else{
-      printf("Cadena: %s \n", cadena);
-    }
+    tipo_tokens(cadena[0]);
+    printf("%s \n", cadena);
+    if(cadena[0]==EOF)
+      break;
     free(cadena);
+
  }
  return 0;
  }

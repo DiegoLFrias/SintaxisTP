@@ -33,13 +33,12 @@ char* get_tokens(){
     ungetc(caracter, stdin);//el caracter no era parte de la cadena y lo manda al stdin
     return cadena;
  }
- int tipo_tokens(char caracter){
+ void tipo_tokens(char caracter){
      if(caracter==','){
-         return SEP;
+         printf("Separador: ");
      }
-     if(caracter==EOF){
-         return FDT;
-     }
-         return CAD;
- 
+     else if(caracter==EOF){
+         printf("Fin de Texto: ");
+     } else
+         printf("Cadena: ");
  }
