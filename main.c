@@ -6,14 +6,14 @@
 
  int main ()
  {
-  int tipo=-1;
+  int cortar=-1;
   char* cadena = (char*)calloc(50, 8);
-  while (tipo!=0){
+  while (cortar!=0){
     cadena = get_tokens();
     tipo_tokens(cadena[0]);
     printf("%s \n", cadena);
     if(cadena[0]==EOF)
-      break;
+      cortar=0;
     free(cadena);
 
  }
